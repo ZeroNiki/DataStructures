@@ -4,9 +4,9 @@
 #define MAX 100
 
 typedef struct {
-  int data[MAX];
-  int front;
-  int rear;
+    int data[MAX];
+    int front;
+    int rear;
 } Queue;
 
 void initQ(Queue *queue);
@@ -16,4 +16,4 @@ void endqueue(Queue *queue, int value);
 int dequeue(Queue *queue);
 int peek(const Queue *queue);
 
-#endif // QUEUE_H
+#endif  // QUEUE_H
