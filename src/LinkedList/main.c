@@ -1,22 +1,24 @@
-#include "llist.h"
-
 #include <stdio.h>
 
+#include "llist.h"
+
 int main() {
-  Node *head = NULL;
+    Node *head = NULL;
 
-  append(&head, 10);
-  append(&head, 20);
-  append(&head, 30);
+    append(&head, 10);
+    append(&head, 20);
+    append(&head, 30);
 
-  printf("Список после добавления элементов: ");
-  displayList(head);
+    printf("Список после добавления элементов: ");
+    displayList(head);
 
-  deleteNode(&head, 20);
-  printf("Список после удаления элемента 20: ");
-  displayList(head);
+    deleteNode(&head, 20);
+    printf("Список после удаления элемента 20: ");
+    displayList(head);
 
-  deleteNode(&head, 40);
+    deleteNode(&head, 40);
+    printf("n/a 40\n");
 
-  return 0;
+    freeList(head);
+    return 0;
 }
