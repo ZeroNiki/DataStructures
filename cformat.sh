@@ -1,17 +1,15 @@
 #!/bin/bash
 
-llistC="./src/LinkedList/*.c"
-llistH="./src/LinkedList/*.h"
+FILES=$(find ./src -type f \( -name "*.c" -o -name "*.h" \))
 
-stackC="./src/Stack/*.c"
-stackH="./src/Stack/*.h"
+if [ -z "$FILES" ]; then
+    echo "No .c or .h files found."
+    exit 1
+fi
 
-queueC="./src/Queue/*.c"
-queueH="./src/Queue/*.h"
+echo "Checking with clang-format..."
+clang-format -n $FILES
 
-echo "check clang-format $llistC $llistH $stackC $stackH $queueC $queueH"
-clang-format -n $llistC $llistH $stackC $stackH $queueC $queueH
-
-clang-format -i $llistC $llistH $stackC $stackH $queueC $queueH
+clang-format -i $FILES
 echo "Done"
 

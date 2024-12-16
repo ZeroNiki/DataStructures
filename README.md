@@ -3,6 +3,7 @@
 - [Stack](https://github.com/ZeroNiki/DataStructures/blob/main/src/Stack/stack_readme.md)
 - [Queue](https://github.com/ZeroNiki/DataStructures/blob/main/src/Queue/queue_readme.md)
 - [Linked List](https://github.com/ZeroNiki/DataStructures/blob/main/src/LinkedList/linked_list_readme.md)
+- [Binary Tree](https://github.com/ZeroNiki/DataStructures/blob/main/src/LinkedList/linked_list_readme.md)
 
 ## Install and build
 ```sh
@@ -21,6 +22,7 @@ in `build` dir:
 - `stack`
 - `queue`
 - `llist`
+- `btree`
 You can launc it (`./stack` etc.)
 
 ## Clean
